@@ -13,16 +13,24 @@ The builder pattern, which eliminates the need to create numerous parameters for
 
 Supports method chaining by having the methods return the "this" keyword
 
+``` 
+ setLastName(lastName:string){
+        this.user.lastName = lastName
+        return this
+
+    }
+
 ```
-it("We should gracefully get all the users details handle an error",()=>{
+ setLastName(lastName:string){
+        this.user.lastName = lastName
+        return this // this line makes the method chainable 
+
+    }
+
+```
         let smith = new UserBuilder("smith");
 
-        let expected = undefined;
-        
-        let actual = smith.setAge(34).setLastName("Davidson").setPhone("0596592") .build();
+        smith.setAge(34).setLastName("Davidson").setPhone("0596592").build(); <= method chaining take place at this line
+
         console.log(actual);// outputs : User { name: 'smith', age: 34, lastName: 'Davidson', phone: '0596592' }
-        
-        
-        assert.strictEqual(expected,actual);
-    })
 ```
