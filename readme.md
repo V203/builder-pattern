@@ -23,7 +23,7 @@ Supports method chaining by having the methods return the "this" keyword
 ```
  setLastName(lastName:string){
         this.user.lastName = lastName
-        return this // this line makes the method chainable 
+        return this;// this line makes the method chainable 
 
     }
 
