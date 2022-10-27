@@ -4,7 +4,25 @@ The builder pattern, which eliminates the need to create numerous parameters for
 
 ****
 
-## Answers Questions like
+## Answers questions like
 
 * How can a class (the same construction process) create different representations of a complex object?
 * How can a class that includes creating a complex object be simplified?
+
+## Features
+
+Supports method chaining by having the methods return the "this" keyword
+
+```
+it("We should gracefully get all the users details handle an error",()=>{
+        let smith = new UserBuilder("smith");
+
+        let expected = undefined;
+        
+        let actual = smith.setAge(34).setLastName("Davidson").setPhone("0596592") .build();
+        console.log(actual);// outputs : User { name: 'smith', age: 34, lastName: 'Davidson', phone: '0596592' }
+        
+        
+        assert.strictEqual(expected,actual);
+    })
+```
