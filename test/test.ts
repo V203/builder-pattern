@@ -47,17 +47,13 @@ describe('My function', function () {
 
     })
 
-    it("We should gracefully get all the users details handle an error",()=>{
+    it("Should try to get last name which we wont set and expect to return undefined.",()=>{
         let smith = new UserBuilder("smith");
 
         let expected = undefined;
-
         
-        
-        let actual = smith.setAge(34).setLastName("Davidson").setPhone("0596592") .build();
-        console.log(actual);
-        
-        
+        let actual = smith.getLastName();
+                
         assert.strictEqual(expected,actual);
     })
 
