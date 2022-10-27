@@ -1,11 +1,13 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class User {
     constructor(name) {
         this.name = name;
     }
 }
-class UserBuilder {
+class UserBuilder extends User {
     constructor(name) {
+        super(name);
         this.user = new User(name);
     }
     setPhone(phone) {
@@ -28,9 +30,4 @@ class UserBuilder {
         return this.user;
     }
 }
-let kate = new UserBuilder("Kate");
-let john = new UserBuilder("John");
-kate.setAge(12).setLastName("Jill").setPhone("0781232");
-john.setAge(32);
-console.log(kate.build());
-console.log(john.build());
+exports.default = UserBuilder;

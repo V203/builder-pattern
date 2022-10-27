@@ -6,9 +6,11 @@ class User{
     }
 }
 
-class UserBuilder {
+
+export default class UserBuilder extends User{
     private  user:any
     constructor(name:string){
+        super(name)
     this.user = new User(name)
 
     }
@@ -37,19 +39,29 @@ class UserBuilder {
     }
 
 
+    getName():string{
+        return this.user.name
+    }
+
+    getAge():number{
+        return this.user.age
+    }
+    
+
+    getLastName():string{
+        return this.user.lastName
+    }
+
+    getPhoneNumber():string{
+        return this.user.phone
+    }
+
+
+
     build(){
         return this.user
     }
 
 
 }
-
-
-let kate = new UserBuilder("Kate");
-let john = new UserBuilder("John");
-kate.setAge(12).setLastName("Jill").setPhone("0781232")
-john.setAge(32)
-console.log(kate.build());
-
-console.log(john.build());
 
