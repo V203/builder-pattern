@@ -36,3 +36,7 @@ setLastName(lastName:string){
 * Immutable objects can be built without much complex logic in the object building process.
 * Object is always instantiated in a complete state
 * Immutable objects can be built without much complex logic in the object building process.
+
+
+
+[![Node.js CI](https://github.com/V203/builder-pattern/actions/workflows/node.js.yml/badge.svg)](https://github.com/V203/builder-pattern/actions/workflows/node.js.yml)
