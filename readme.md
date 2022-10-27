@@ -30,3 +30,9 @@ setLastName(lastName:string){
 
         console.log(actual);// outputs : User { name: 'smith', age: 34, lastName: 'Davidson', phone: '0596592' }
 ```
+
+## Advatages
+* Builder design pattern also helps in minimizing the number of parameters in the constructor and thus there is no need to pass in null for optional parameters to the constructor.
+* Immutable objects can be built without much complex logic in the object building process.
+* Object is always instantiated in a complete state
+* Immutable objects can be built without much complex logic in the object building process.
