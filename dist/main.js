@@ -26,8 +26,21 @@ class UserBuilder extends User {
         this.user.lastName = lastName;
         return this;
     }
+    getName() {
+        return this.user.name;
+    }
+    getAge() {
+        return this.user.age;
+    }
+    getLastName() {
+        return this.user.lastName;
+    }
+    getPhoneNumber() {
+        return this.user.phone;
+    }
     build() {
         return this.user;
     }
 }
 exports.default = UserBuilder;
+console.log("it works");
