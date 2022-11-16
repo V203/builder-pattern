@@ -1,69 +1,26 @@
-class User{
-    private name:string
-    constructor(name:string){
-        this.name = name
+import UserBuilder from "./builder";
 
-    }
-}
+let vuyisa = new UserBuilder("Vuyisa");
 
 
-export default class UserBuilder extends User{
-    private  user:any
-    constructor(name:string){
-        super(name)
-    this.user = new User(name)
 
-    }
+vuyisa.setAge(21);
+console.log(vuyisa.getAge());// prints:21
 
+vuyisa.setLastName("Ndubela");
 
-    setPhone(phone:string){
-        this.user.phone = phone;
-        return this
-    }
+console.log(vuyisa.getLastName());//prints :Ndubela
 
-    setAge(age:number){
-        this.user.age = age
-        return this
+vuyisa.setAge(31);
 
-    }
+console.log(vuyisa.getAge());// and now it prints 31 not 21
 
-    setName(name:string){
-        this.user.name = name
-        return this
-    }
+vuyisa.setPhone("068123123");
 
-    setLastName(lastName:string){
-        this.user.lastName = lastName
-        return this
-
-    }
+console.log(vuyisa.getPhoneNumber());//prints 068123123
 
 
-    getName():string{
-        return this.user.name
-    }
-
-    getAge():number{
-        return this.user.age
-    }
-    
-
-    getLastName():string{
-        return this.user.lastName
-    }
-
-    getPhoneNumber():string{
-        return this.user.phone
-    }
-
-    
 
 
-    build(){
-        return this.user
-    }
-
-
-}
 
 

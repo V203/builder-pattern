@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import UserBuilder from '../main'; 
+import UserBuilder from '../builder'; 
 
 
 describe('My function', function () {

@@ -1,46 +1,15 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-class User {
-    constructor(name) {
-        this.name = name;
-    }
-}
-class UserBuilder extends User {
-    constructor(name) {
-        super(name);
-        this.user = new User(name);
-    }
-    setPhone(phone) {
-        this.user.phone = phone;
-        return this;
-    }
-    setAge(age) {
-        this.user.age = age;
-        return this;
-    }
-    setName(name) {
-        this.user.name = name;
-        return this;
-    }
-    setLastName(lastName) {
-        this.user.lastName = lastName;
-        return this;
-    }
-    getName() {
-        return this.user.name;
-    }
-    getAge() {
-        return this.user.age;
-    }
-    getLastName() {
-        return this.user.lastName;
-    }
-    getPhoneNumber() {
-        return this.user.phone;
-    }
-    build() {
-        return this.user;
-    }
-}
-exports.default = UserBuilder;
-console.log("it works");
+const builder_1 = __importDefault(require("./builder"));
+let vuyisa = new builder_1.default("Vuyisa");
+vuyisa.setAge(21);
+console.log(vuyisa.getAge()); // prints:21
+vuyisa.setLastName("Ndubela");
+console.log(vuyisa.getLastName()); //prints :Ndubela
+vuyisa.setAge(31);
+console.log(vuyisa.getAge()); // and now it prints 31 not 21
+vuyisa.setPhone("068123123");
+console.log(vuyisa.getPhoneNumber()); //prints 068123123
